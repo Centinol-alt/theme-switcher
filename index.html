@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centinol-alt's Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: all 0.3s ease;
+      margin: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* Gremlin Mode (Default) */
+    .gremlin-mode {
+      background-color: #1a1a1a;
+      color: #00ff00;
+    }
+    .gremlin-mode h1, .gremlin-mode h2 {
+      color: #ff00ff;
+      animation: glitch 1s linear infinite;
+    }
+    .gremlin-mode button {
+      background-color: #ff00ff;
+      color: #000;
+    }
+    .gremlin-mode button:hover {
+      background-color: #00ff00;
+    }
+    @keyframes glitch {
+      2%, 64% { transform: translate(2px, 0) skew(5deg); }
+      4%, 60% { transform: translate(-2px, 0) skew(-5deg); }
+      62% { transform: translate(0, 0) skew(0); }
+    }
+
+    /* Genius Mode */
+    .genius-mode {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    .genius-mode h1, .genius-mode h2 {
+      color: #0066cc;
+    }
+    .genius-mode button {
+      background-color: #0066cc;
+      color: #fff;
+    }
+    .genius-mode button:hover {
+      background-color: #003366;
+    }
+  </style>
+</head>
+<body class="gremlin-mode">
+  <div class="theme-toggle">
+    <button onclick="toggleTheme()">🌙 Gremlin Mode</button>
+  </div>
+  <div class="container">
+    <h1>Yo, I’m Centinol-alt!</h1>
+    <p><em>A code-slinging gremlin who builds apps to fix the world’s annoyances—one line at a time.</em></p>
+    <p>My projects are equal parts “Eureka!” and “Why is this breaking at 3 AM?” I thrive on turning pain points into slick solutions, usually with a side of caffeine-fueled chaos.</p>
+
+    <h2>What I Do</h2>
+    <ul>
+      <li>Craft apps that make life less infuriating—think smoother workflows, fewer headaches.</li>
+      <li>Speak fluently in JavaScript, Python, and the occasional primal scream when regex betrays me.</li>
+      <li>Solve problems by diving into the mess, whether it’s buggy APIs, clunky UX, or just bad vibes in the codebase.</li>
+      <li>Embrace the chaos of debugging, refactoring, and the eternal question: “Did I push that commit?”</li>
+    </ul>
+
+    <h2>Stuff I’ve Built</h2>
+    <p><strong>Zettle Notes</strong> – A note-taking app to fix [specific pain point]. Built with [tech stack]. <a href="#">Website</a></p>
+    <p><strong>Family Tree</strong> – Tackled outdated and insecure genealogy apps with [tech stack]. It’s alive, and I only cried twice. <a href="#">Website</a></p>
+
+    <h2>The Vibe</h2>
+    <ul>
+      <li>Code’s my canvas, and I paint with 50% genius, 50% “I’ll fix it tomorrow” energy.</li>
+      <li>I’m all about practical solutions, not buzzword bingo. If it works, it’s good. If it doesn’t, we reboot or yeet.</li>
+      <li>Collaboration? I’m your guy. I’ll bring the wit, grit, and git commits.</li>
+    </ul>
+
+    <h2>Let’s Connect</h2>
+    <p>📧 centinol@proton.me</p>
+    <p><a href="https://x.com/centinol_alt">Check my unfiltered chaos on X Profile</a></p>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.querySelector("button");
+      if (body.classList.contains("gremlin-mode")) {
+        body.classList.remove("gremlin-mode");
+        body.classList.add("genius-mode");
+        button.innerHTML = "☀️ Genius Mode";
+      } else {
+        body.classList.remove("genius-mode");
+        body.classList.add("gremlin-mode");
+        button.innerHTML = "🌙 Gremlin Mode";
+      }
+    }
+  </script>
+</body>
+</html>
